@@ -28,7 +28,7 @@ const Navbar = () => {
         </div>
         <div className="items-center gap-6 font-semibold sm:flex hidden">
           <div className="text-gray">Login</div>
-          <div className="bg-cyan text-white py-2 px-5 rounded-full hover:opacity-60 transition cursor-pointer">
+          <div className="btn">
             Sign up
           </div>
         </div>
@@ -37,7 +37,7 @@ const Navbar = () => {
           <img src={iconMenu} alt="hamburger menu" className="w-10 h-10" />
         </div>
 
-        <div className={`absolute sm:hidden ${isOpen ? 'flex' : 'hidden'} top-12 w-full`}>
+        <div className={`absolute sm:hidden ${isOpen ? 'flex' : 'hidden'} top-12 w-full z-10`}>
           <ul className="gap-4 text-white font-semibold flex flex-col items-center w-full bg-violet-default py-4 rounded-2xl">
             <li className="cursor-pointer">
               Features

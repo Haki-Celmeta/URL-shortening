@@ -22,3 +22,7 @@ body {
   position: relative;
   max-width: 1120px;
 }
+
+.btn {
+  @apply bg-cyan text-white py-2 px-5 rounded-full hover:opacity-60 transition cursor-pointer w-fit;
+}

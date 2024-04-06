@@ -9,7 +9,7 @@ export default {
       colors: {
         violet: {
           default: 'hsl(257, 27%, 26%)',
-          100: 'hsl(257, 7%, 63%',
+          100: 'hsl(257, 7%, 63%)',
           200: 'hsl(260, 8%, 14%)'
         },
         cyan: 'hsl(180, 66%, 49%)',
