@@ -1,9 +1,37 @@
+import { useGSAP } from "@gsap/react";
 import { iconBrand } from "../utils";
 import { iconCustomizable } from "../utils";
 import { iconDetailed } from "../utils";
+import gsap from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // eslint-disable-next-line react/prop-types
 const Statistics = () => {
+  useGSAP(() => {
+    gsap.to('.statistics-card-content-1', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: '.statistics-card-content-1'
+    })
+    gsap.to('.statistics-card-content-2', {
+      opacity: 1,
+      y: 40,
+      duration: 1,
+      delay: 0.5,
+      scrollTrigger: '.statistics-card-content-2'
+    })
+    gsap.to('.statistics-card-content-3', {
+      opacity: 1,
+      y: 80,
+      duration: 1,
+      delay: 1,
+      scrollTrigger: '.statistics-card-content-3'
+    })
+  }, [])
+
   return (
     <section className="bg-slate-200 py-12 pb-32 pt-32">
       <div className="screen-max-width px-2">
@@ -17,7 +45,7 @@ const Statistics = () => {
           </p>
         </div>
         <div className="md:flex md:flex-row flex flex-col items-center mt-24">
-          <div className="bg-white px-6 py-10 pt-14 rounded-md relative flex flex-col md:items-start items-center">
+          <div className="statistics-card-content-1 bg-white px-6 py-10 pt-14 rounded-md relative flex flex-col md:items-start items-center">
             <div className="bg-violet-default w-fit p-3 rounded-full flex items-center justify-center absolute top-[-18%]">
               <img src={iconBrand} alt="icond brand recognition" />
             </div>
@@ -28,8 +56,8 @@ const Statistics = () => {
               your content.
             </p>
           </div>
-          <div className="md:w-24 md:h-2 h-20 w-2 bg-cyan"></div>
-          <div className="bg-white px-6 py-10 pt-14 rounded-md relative md:translate-y-10 flex flex-col md:items-start items-center">
+          <div className="statistics-card-content-1 md:w-24 md:h-2 h-20 w-2 bg-cyan"></div>
+          <div className="statistics-card-content-2 bg-white px-6 py-10 pt-14 rounded-md relative flex flex-col md:items-start items-center">
             <div className="bg-violet-default w-fit p-3 rounded-full flex items-center justify-center absolute top-[-18%]">
               <img src={iconDetailed} alt="icond detailed records" />
             </div>
@@ -40,8 +68,8 @@ const Statistics = () => {
               decisions.
             </p>
           </div>
-          <div className="md:w-24 md:h-2 h-20 w-2 bg-cyan"></div>
-          <div className="bg-white px-6 py-10 pt-14 rounded-md relative md:translate-y-20 flex flex-col md:items-start items-center">
+          <div className="statistics-card-content-2 md:w-24 md:h-2 h-20 w-2 bg-cyan"></div>
+          <div className="statistics-card-content-3 bg-white px-6 py-10 pt-14 rounded-md relative flex flex-col md:items-start items-center">
             <div className="bg-violet-default w-fit p-3 rounded-full flex items-center justify-center absolute top-[-18%]">
               <img src={iconCustomizable} alt="icond fully costomizable" />
             </div>

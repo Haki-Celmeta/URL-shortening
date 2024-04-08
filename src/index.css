@@ -35,3 +35,33 @@ body {
   fill: cyan;
   transition: 0.15s ease-in-out;
 }
+
+/* initial values */
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.link-input-content {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.statistics-card-content-1 {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.statistics-card-content-2 {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.statistics-card-content-3 {
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+.boost-cta-content {
+  opacity: 0;
+  transform: scale(0.2);
+}

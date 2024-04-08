@@ -1,9 +1,19 @@
 import { useState, useEffect } from "react";
 import { bgShortenDesktop } from "../utils";
 import Snackbar from "@mui/material/Snackbar";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap/gsap-core";
 
 // eslint-disable-next-line react/prop-types
 const LinkInput = () => {
+  useGSAP(() => {
+    gsap.to('.link-input-content', {
+      opacity: 1,
+      y: 0,
+      duration: 1
+    })
+  }, [])
+
   const [inputValue, setInputValue] = useState("");
   const [formError, setFormError] = useState(false);
   const [links, setLinks] = useState(
@@ -70,7 +80,7 @@ const LinkInput = () => {
 
   return (
     <section className="pt-8 mb-[-70px]">
-      <div className="screen-max-width bg-violet-default relative lg:w-[70%] md:w-[90%] w-full mx-2 flex items-center justify-center rounded-lg">
+      <div className="link-input-content screen-max-width bg-violet-default relative lg:w-[70%] md:w-[90%] w-full mx-2 flex items-center justify-center rounded-lg">
         <img
           src={bgShortenDesktop}
           alt="shorten desktop background"
