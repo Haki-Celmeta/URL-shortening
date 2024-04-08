@@ -2,9 +2,10 @@ import { iconBrand } from "../utils";
 import { iconCustomizable } from "../utils";
 import { iconDetailed } from "../utils";
 
+// eslint-disable-next-line react/prop-types
 const Statistics = () => {
   return (
-    <section className="bg-slate-200 py-12 pb-32">
+    <section className="bg-slate-200 py-12 pb-32 pt-32">
       <div className="screen-max-width px-2">
         <div className="w-full flex flex-col gap-6 justify-center items-center">
           <h2 className="text-center text-3xl font-bold">

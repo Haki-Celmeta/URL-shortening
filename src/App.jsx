@@ -10,8 +10,8 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <LinkInput />
-      <Statistics />
+      <LinkInput/>
+      <Statistics/>
       <Cta />
       <Footer />
     </>
